@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/server.js",
+        "use": "@now/node",
+        "config": {
+          "helpers": false,
+          "includeFiles": ["views/**"]
+        }
+      }
+    ],
+    "routes": [
+      { "src": "/.*", "dest": "/api/server.js" }
+    ]
+  }
